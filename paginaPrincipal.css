@@ -1,0 +1,266 @@
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Georgia', serif;
+    color: #f5f5f5;
+}
+
+body {
+    background-color: #111;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+/* Fondo principal */
+#fondo img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    opacity: 0.2;
+    z-index: -1;
+    filter: blur(2px);
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5em 2em;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.85), rgba(34, 34, 34, 0.85));
+    border-bottom: 3px solid #ffcc00;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+#head {
+    display: flex;
+    align-items: center;
+}
+
+#logo {
+    height: 70px;
+    margin-right: 15px;
+}
+
+h3 {
+    font-size: 2em;
+    color: #ffcc00;
+    text-shadow: 0 0 10px #ffcc00; /*Resalta el amarillo en las letras*/
+    letter-spacing: 2px;
+}
+
+#reloj {
+    font-size: 1.2em;
+    color: #ffffff;
+}
+
+/* Carrusel */
+.carrousel {
+    width: 100%;
+    max-width: 200px; /* Controla el tamaño máximo del carrusel */
+    min-height: 200px;
+    margin: 2.5em auto;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.5);
+    position: relative;
+    display: flex;
+    align-items: center; /* Centra verticalmente las imágenes dentro del carrusel */
+    justify-content: center; /* Centra horizontalmente las imágenes */
+}
+
+/* Contenedor de las imágenes para desplazarse horizontalmente */
+.grande {
+    display: flex;
+    transition: transform 0.6s ease-in-out;
+    width: 100%; /* Asegura que ocupe el 100% del contenedor */
+}
+
+/* Estilo de las imágenes individuales */
+.img {
+    width: 100%; /* Ajusta el ancho de la imagen al contenedor */
+    height: auto; /* Mantiene la proporción original de la imagen */
+    object-fit: contain; /* Ajusta la imagen al contenedor sin recortar */
+    transition: opacity 0.4s ease;
+    filter: brightness(0.85);
+}
+
+/* Estilos para los puntos de navegación */
+.puntos {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.punto {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.punto.activo {
+    background-color: white;
+}
+
+/* Efecto hover para los puntos */
+.punto:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+
+
+
+/* Puntos de navegación */
+.puntos {
+    display: flex;
+    justify-content: center;
+    padding: 1em 0;
+    list-style: none;
+}
+
+.punto {
+    width: 14px;
+    height: 14px;
+    margin: 0 8px;
+    background-color: #666;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.punto.activo {
+    background-color: #ffcc00;
+    box-shadow: 0 0 8px #ffcc00, 0 0 15px rgba(255, 204, 0, 0.5);
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+#redes {
+    margin-bottom: 30px;
+}
+
+.apple {
+    margin: 0 8px;
+    width: 100px;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.android {
+    margin: 0 8px;
+    width: 100px;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.instagram {
+    margin: 0 8px;
+    width: 40px;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.twitter {
+    margin: 0 8px;
+    width: 40px;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.facebook {
+    margin: 0 8px;
+    width: 40px;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+#redes img:hover {
+    transform: scale(1.2);
+}
+
+/* Contenedor general para las columnas */
+#contenidoPrincipal {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start; 
+    width: 100%;
+    padding: 20px;
+}
+
+/* Estilos de cada columna */
+#contenidoPrincipal > div {
+    flex: 1; 
+    margin: 0 10px; 
+    min-width: 200px; 
+}
+
+/* Estilos de los títulos de las secciones */
+#contenidoPrincipal h3 {
+    font-size: 1.2em;
+    color: #ffcc00;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Estilos de los textos */
+#contenidoPrincipal p {
+    font-size: 0.9em;
+    color: #666;
+    margin: 6px 0;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+#contenidoPrincipal p:hover {
+    color: #0073e6; /* Cambia el color al pasar el cursor */
+}
+
+/* Sección de métodos de pago */
+#metodosPago {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #555;
+}
+
+#metodosPago img {
+    width: 70px;
+    height: auto;
+    transition: transform 0.3s, filter 0.3s; /*Amplia la imagen y lo que tarda en cambiarla*/
+    filter: grayscale(100%);/*Filtra las imagenes en gris*/
+}
+
+#metodosPago img:hover {
+    transform: scale(1.7);
+    filter: grayscale(0%);/*Da color cuando pasa el cursor por encima*/
+}
+
+
+
+
