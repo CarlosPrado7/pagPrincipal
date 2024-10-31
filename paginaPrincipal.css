@@ -60,17 +60,17 @@ h3 {
 }
 
 /* Carrusel */
-/* Contenedor principal para alinear los carruseles horizontalmente */
+/* Contenedor principal para alinear los carruseles*/
 .home {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 200px; /* Espacio entre cada carrusel */
+    gap: 200px; /*Espacio entre cada carrusel*/
     padding: 60px;
     width: 100%;
 }
 
-/* Estilos individuales de cada carrusel */
+/* Estilo individual carrusel */
 .carousel {
     width: 500px;
     max-width: 100%;
@@ -86,16 +86,15 @@ h3 {
     justify-content: center;
 }
 
-/* Contenedor de las imágenes para el carrusel */
 .carousel-items {
     display: flex;
     transition: transform 0.6s ease-in-out;
-    width: 100%; /* Asegura que se desplace correctamente */
+    width: 100%; /*Con esto se desplaza*/
 }
 
 /* Estilo de las imágenes individuales */
 .carousel-item {
-    width: 100%; /* Ocupa todo el ancho del carrusel */
+    width: 100%; /* Ocupa todo el carrusel*/
     flex-shrink: 0;
     display: flex;
     justify-content: center;
@@ -103,14 +102,13 @@ h3 {
 }
 
 .img {
-    width: 100%; /* Ocupa el 100% del contenedor para no ser recortada */
+    width: 100%; /* Ocupa todo del contenedor para no ser recortada */
     height: auto;
     object-fit: cover;
     transition: opacity 0.4s ease;
     filter: brightness(0.85);
 }
 
-/* Estilos para los puntos de navegación */
 .puntos {
     display: flex;
     justify-content: center;
@@ -137,12 +135,9 @@ h3 {
     box-shadow: 0 0 10px rgba(255, 204, 0, 0.6), 0 0 20px rgba(255, 204, 0, 0.4);
 }
 
-
-/* Efecto hover para los puntos */
 .punto:hover {
     background-color: rgba(255, 255, 255, 0.8);
 }
-
 
 /* Footer */
 footer {
