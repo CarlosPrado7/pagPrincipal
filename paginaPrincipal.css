@@ -76,7 +76,7 @@ h3 {
 }
 
 /* Contenedor de las imágenes para desplazarse horizontalmente */
-.grande {
+.slots {
     display: flex;
     transition: transform 0.6s ease-in-out;
     width: 200%; /* 200% si hay dos imágenes */

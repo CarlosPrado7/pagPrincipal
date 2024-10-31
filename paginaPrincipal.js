@@ -14,8 +14,8 @@ setInterval(actualizarReloj, 1000);
 // Inicia el reloj
 actualizarReloj();
 
-//Carrousel de juegos
-const grande = document.querySelector('.grande')
+//Carrousel de tragaperras
+const grande = document.querySelector('.slots')
 const punto = document.querySelectorAll('.punto')
 
 //Recorrer todos los puntos
