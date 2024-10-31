@@ -62,8 +62,8 @@ h3 {
 /* Carrusel */
 .carrousel {
     width: 100%;
-    max-width: 200px; /* Controla el tamaño máximo del carrusel */
-    min-height: 200px;
+    max-width: 300px; /* Controla el tamaño máximo del carrusel */
+    min-height: 300px;
     margin: 2.5em auto;
     overflow: hidden;
     border-radius: 15px;
@@ -71,22 +71,22 @@ h3 {
     background-color: rgba(0, 0, 0, 0.5);
     position: relative;
     display: flex;
-    align-items: center; /* Centra verticalmente las imágenes dentro del carrusel */
-    justify-content: center; /* Centra horizontalmente las imágenes */
+    align-items: center;
+    justify-content: center;
 }
 
 /* Contenedor de las imágenes para desplazarse horizontalmente */
 .grande {
     display: flex;
     transition: transform 0.6s ease-in-out;
-    width: 100%; /* Asegura que ocupe el 100% del contenedor */
+    width: 200%; /* 200% si hay dos imágenes */
 }
 
 /* Estilo de las imágenes individuales */
 .img {
-    width: 100%; /* Ajusta el ancho de la imagen al contenedor */
-    height: auto; /* Mantiene la proporción original de la imagen */
-    object-fit: contain; /* Ajusta la imagen al contenedor sin recortar */
+    width: 100%; /* Cada imagen ocupa el 100% del ancho del carrusel */
+    height: auto;
+    object-fit: contain;
     transition: opacity 0.4s ease;
     filter: brightness(0.85);
 }
@@ -116,6 +116,12 @@ h3 {
 .punto.activo {
     background-color: white;
 }
+
+/* Efecto hover para los puntos */
+.punto:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
 
 /* Efecto hover para los puntos */
 .punto:hover {
