@@ -14,29 +14,28 @@ setInterval(actualizarReloj, 1000);
 // Inicia el reloj
 actualizarReloj();
 
-//Carrousel de tragaperras
-const grande = document.querySelector('.slots')
-const punto = document.querySelectorAll('.punto')
+document.addEventListener("DOMContentLoaded", function() {
+    const carousels = document.querySelectorAll(".carousel");
 
-//Recorrer todos los puntos
-punto.forEach( (cadaPunto , i) => {
-    //Asignamos CLICK a cada punto
-    punto[i].addEventListener('click', ()=>{
-        //Guardar la posicion de ese punto
-        let posicion = i
-        //Calculamos el espacio que debe desplazarse
-        let operacion = posicion * -100
+    carousels.forEach((carousel) => {
+        const items = carousel.querySelector(".carousel-items");
+        const points = carousel.querySelectorAll(".punto");
+        let currentIndex = 0;
 
-        // Movemos el grande
-        grande.style.transform = `translateX(${operacion}%)`
+        points.forEach((point, index) => {
+            point.addEventListener("click", () => {
+                currentIndex = index;
+                updateCarousel();
+            });
+        });
 
+        function updateCarousel() {
+            items.style.transform = `translateX(-${currentIndex * 100}%)`;
+            points.forEach((point, idx) => {
+                point.classList.toggle("activo", idx === currentIndex);
+            });
+        }
 
-        //Recorremos todos los puntos
-        punto.forEach( ( cadaPunto , i)=>{
-            //Quitamos la clase
-            punto[i].classList.remove('activo')
-        })
-        //Añadimos la clase
-        punto[i].classList.add('activo')
-    })
-})
+        updateCarousel();
+    });
+});
