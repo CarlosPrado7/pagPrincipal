@@ -19,6 +19,37 @@
             <img src="assets/logoDefinitivo.png" id="logo">
             <h3>Golden Depths</h3>
         </div>
+
+        <div id="principal">
+            <div id="saldoPagina">
+                <p>Tu Saldo:</p>
+            </div>
+            <div id="imagenes">
+                <img src="assets/mas.png" id="sumarDinero" alt="Añadir dinero">
+                <img src="assets/retirarDinero.png" id="retirarDineroSaldo" alt="Retirar dinero">
+            </div>
+        </div>
+
+        <!--Modal para añadir dinero-->
+        <div id="modalAniadir" class="modalAniadir">
+            <div class="modal-aniadir">
+                <span id="closeModalAniadir" class="closeModalAniadir">&times;</span>
+                <h2>Introduce dinero</h2>
+                <input type="number" id="inputDinero" placeholder="Dinero" min="0" step="0.01">
+                <button id="guardarDinero">Guardar</button>
+            </div>
+        </div>
+
+        <!--Modal retirar dinero-->
+        <div id="modalRetirar" class="modalRetirar">
+            <div class="modal-retirar">
+                <span id="closeModalRetirar" class="closeModalRetirar">&times;</span>
+                <h2>¿Cuanto quieres retirar?</h2>
+                <input type="number" id="inputRetirar" placeholder="Dinero" min="0" step="0.01">
+                <button id="retirarDinero">Retirar</button>
+            </div>
+        </div>
+
         <div id="reloj"></div>
 
     </header>

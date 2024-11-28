@@ -59,6 +59,198 @@ h3 {
     color: #ffffff;
 }
 
+/*SALDO*/
+#principal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 3px solid #ffcc00;
+    border-radius: 50px; 
+    width: 30%; 
+    margin: 0 auto; 
+}
+
+#saldoPagina {
+    font-size: 1.2em; 
+    font-weight: bold; 
+    color: #000000; 
+}
+
+#saldoPagina p{
+    color: #ffcc00;
+}
+
+#imagenes {
+    display: flex;
+    gap: 20px; 
+}
+
+#imagenes img {
+    width: 50px; 
+    height: 50px; 
+    cursor: pointer; 
+    transition: transform 0.3s ease;
+}
+
+#imagenes img:hover {
+    transform: scale(1.1); 
+}
+
+#saldoPagina p {
+    margin: 0; 
+}
+
+/*Modal de añadir dinero*/
+.modalAniadir {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(24, 24, 24, 0.705); 
+    z-index: 1000; 
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo para la caja del contenido del modal */
+.modal-aniadir {
+    background-color: #000000;
+    padding: 20px;
+    border-radius: 10px; 
+    width: 100%;
+    max-width: 400px; 
+    text-align: center; 
+}
+
+/* Estilo para el botón de cerrar */
+.closeModalAniadir {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffcc00;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.closeModalAniadir:hover {
+    color: #ff0000; 
+}
+
+/* Estilo para el título del modal */
+.modal-aniadir h2 {
+    font-size: 24px;
+    color: #ffcc00;
+    margin-bottom: 20px;
+}
+
+/* Estilo para el input */
+.modal-aniadir input[type="number"] {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    border: 5px ridge #ffcc00;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    color: #000000;
+}
+
+/* Estilo para el botón */
+.modal-aniadir button {
+    background-color: #ffcc00;
+    color: black;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal-aniadir button:hover {
+    background-color: #0033ff; 
+}
+
+/*Modal retirar dinero*/
+.modalRetirar {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(24, 24, 24, 0.705); 
+    z-index: 1000; 
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo para la caja del contenido del modal */
+.modal-retirar {
+    background-color: #000000;
+    padding: 20px;
+    border-radius: 10px; 
+    width: 100%;
+    max-width: 400px; 
+    text-align: center; 
+}
+
+/* Estilo para el botón de cerrar */
+.closeModalRetirar {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffcc00;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.closeModalRetirar:hover {
+    color: #ff0000; 
+}
+
+/* Estilo para el título del modal */
+.modal-retirar h2 {
+    font-size: 24px;
+    color: #ffcc00;
+    margin-bottom: 20px;
+}
+
+/* Estilo para el input */
+.modal-retirar input[type="number"] {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    border: 5px ridge #ffcc00;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    color: #000000;
+}
+
+/* Estilo para el botón */
+.modal-retirar button {
+    background-color: #ffcc00;
+    color: black;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal-retirar button:hover {
+    background-color: #0033ff; 
+}
+
 /* Carrusel */
 /* Contenedor principal para alinear los carruseles*/
 .home {
